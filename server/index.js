@@ -5,6 +5,7 @@ let app = express();
 let cors = require("cors");
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(`mongodb://127.0.0.1/Blogs`);
 
@@ -46,6 +47,6 @@ app.get("/:abc", (req, res) => {
       console.log("error");
     });
 });
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("server is connected");
 });

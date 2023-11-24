@@ -20,20 +20,11 @@ const One = () => {
   }, [abc]);
 
   return (
-    <div>
-      <img
-        src={data.image}
-        alt={data._id}
-        className="max-w-xl relative left-64"
-      />
-      <h1 className="text-5xl mb-5">{data.title}</h1>
-      <div className="max-w-l">
-        <ReactQuill
-          value={data.article}
-          readOnly={true}
-          theme="bubble"
-          className="text-3xl"
-        />
+    <div className="w-8/12 relative left-60 top-10">
+      <img src={data.image} alt={data._id} className="w-full p-5" />
+      <h1 className="text-5xl mb-5 p-2">{data.title}</h1>
+      <div className="max-w-l mt-6">
+        <ReactQuill value={data.article} readOnly={true} theme="bubble" />
       </div>
     </div>
   );
